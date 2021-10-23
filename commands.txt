@@ -1,0 +1,16 @@
+dotnet -h
+dotnet new sln
+dotnet new webapi -o ThingsToDoApi
+dotnet sln add ThingsToDoApi
+dotnet dev-certs https --trust
+
+https://localhost:5001/swagger/index.html
+
+Install from nuget galllery
+
+dotnet tool install --global dotnet-ef --version 5.0.11
+dotnet ef migrations add InitialCreate -o Data/Migrations
+dotnet ef database update
+dotnet ef migrations add updatemigrationname
+dotnet ef database update
+dotnet new gitignore

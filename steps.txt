@@ -1,0 +1,9 @@
+create .net API
+ - Create api
+ - Create Entity Tables (also in startup file) 
+ - Create sqlite sb connection strings and add in app settings.json
+ - Install ef tool
+ - Create migrations
+ - install core.Design from nuget gallery as mentioed in the error message
+ - run mugraton commad
+ - run update command to create database
