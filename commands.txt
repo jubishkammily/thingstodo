@@ -14,3 +14,28 @@ dotnet ef database update
 dotnet ef migrations add updatemigrationname
 dotnet ef database update
 dotnet new gitignore
+
+
+***git commands
+
+git init
+git remote add origin git@github.com:jubishkammily/thingstodo.git
+git add .
+git commit -m "initial commit"
+git push -u origin master
+
+
+*****ssh Commands
+ssh-keygen -o
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/schacon/.ssh/id_rsa):
+Created directory '/home/schacon/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+
+
+
+*****Angualar
+
+ng add ngx-bootstrap   (this command does same things as npm install but also exeute the initialize code)  Also jquery warning will come but it is not required
+npm install font-awesome 

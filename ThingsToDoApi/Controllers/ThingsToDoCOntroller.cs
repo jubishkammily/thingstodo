@@ -30,12 +30,14 @@ namespace ThingsToDoApi.Controllers
         // Convert the above code to Asynchronous so that when the database is running others can use this Http call
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppDataTable>>> GetListTopThings(string category){
+
+         
             var topList =   await (_context.Details
             .Where(p=>p.Category ==category).ToListAsync());
-
             var topList2 = topList.OrderBy(s => s.Rank);
-
             return topList2.ToList();
+
+      
         }
  
     }
