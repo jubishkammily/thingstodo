@@ -11,12 +11,11 @@ using ThingsToDoApi.Entities;
 
 namespace ThingsToDoApi.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ThingsToDoCOntroller : ControllerBase
+    
+    public class ThingsToDoController : CustomBaseApiController
     {
         private readonly DataContext _context;
-        public ThingsToDoCOntroller(DataContext context)
+        public ThingsToDoController(DataContext context)
         {
             _context = context;
         }
@@ -28,6 +27,7 @@ namespace ThingsToDoApi.Controllers
         // }
 
         // Convert the above code to Asynchronous so that when the database is running others can use this Http call
+        [Route("TopCategories")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<AppDataTable>>> GetListTopThings(string category){
 
@@ -38,6 +38,12 @@ namespace ThingsToDoApi.Controllers
             return topList2.ToList();
 
       
+        }
+        [Route("Users")]
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<User>>> GetUsers(){
+            
+            return await _context.UserDetails.ToListAsync();     
         }
  
     }

@@ -8,7 +8,7 @@ namespace ThingsToDoApi.Entities
     public class AppDataTable
     {
         public int Id { get; set; }
-        public string Category { get; set; }
+        public string Category { get; set; }    
         public string City { get; set; }
         public int Rank { get; set; }
         public string URL { get; set; }

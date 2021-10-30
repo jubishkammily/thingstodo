@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   }
 
   getTopRestaurents(){
-    this.http.get('http://localhost:5000/api/ThingsToDo?category=Restaurent').subscribe(resp => {
+    this.http.get('https://localhost:5001/api/thingstodo/TopCategories?category=Restaurent').subscribe(resp => {
 
       this.restaurents = resp;
     },error =>{

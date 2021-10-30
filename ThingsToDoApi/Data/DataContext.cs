@@ -14,5 +14,7 @@ namespace ThingsToDoApi.Data
         }
 
         public DbSet<AppDataTable> Details{get;set;}
+
+        public DbSet<User> UserDetails{get;set;}
     }
 }

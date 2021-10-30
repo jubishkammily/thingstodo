@@ -1,3 +1,6 @@
+SourceCode Original Reference
+ https://github.com/TryCatchLearn/DatingApp
+
 create .net API
  - Create api
  - Create Entity Tables (also in startup file) 
@@ -5,5 +8,27 @@ create .net API
  - Install ef tool
  - Create migrations
  - install core.Design from nuget gallery as mentioed in the error message
- - run mugraton commad
+ - run migraton commad
  - run update command to create database
+
+
+ create angular project
+
+***create login 
+    create computed has and passwordsalt for authentication (until learn identity server)
+
+*** Communication using token
+    brwser sends requests (username and pwd) --- > server validates 
+    browser sends requests (username and pwd) <---  server validats and send JWT
+    browser saves jwt and send for further requests (username and pwd) <---  server validats and send JWT
+    Add service
+    AddScoped(for services interfaces and   ) / lifetime of http requests
+
+    JWT Token can be retured from the endpoint
+    (can be testing in the website jwt.io)
+
+
+
+
+
+ 
