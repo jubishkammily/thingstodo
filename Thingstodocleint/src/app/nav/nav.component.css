@@ -1,0 +1,16 @@
+.right{
+    float:right;margin-left:50%
+}   
+
+.navbar{
+    width: 100%!important;
+}
+
+.me-2{
+    margin-right: 0.5rem!important;
+}
+
+
+.dropdown-toggle, .dropdown-item{
+    cursor:pointer;
+    }

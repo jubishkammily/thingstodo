@@ -28,6 +28,22 @@ create .net API
     (can be testing in the website jwt.io)
 
 
+Explanations : 
+
+    *ngIf  : will completly remove the element from the DOM
+    [hidden] : Will hide the element from page but it will still exist in the DOM
+    [(ngModel)] : (Banana in a box) for Two way Communication
+    
+
+
+***** Angular User Session 
+
+    - You can use the login API to get the username and Token
+    - Store the value in localstorage of the browser
+    -   
+
+    
+
 
 
 

@@ -40,4 +40,7 @@ Enter same passphrase again:
 *****Angualar
 
 ng add ngx-bootstrap   (this command does same things as npm install but also exeute the initialize code)  Also jquery warning will come but it is not required
-npm install font-awesome 
+npm install font-awesome
+
+*** ng g s account
+    ng g c nav  

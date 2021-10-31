@@ -1,17 +1,52 @@
-<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
-    <div class="container">
-        <a class="navbar-brand" routerLink='/' routerLinkActive='active'>Best In City</a>
-
-        <ul class="navbar-nav mr-auto">
-            
-            <li class="nav-item">
-                <a class="nav-link" routerLink='/errors'routerLinkActive='active' >Errors</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Best Things</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider">
             </li>
-        </ul>
-
-       
-
-        
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="right">
+        <div class="dropdown" *ngIf="service.currentUser$ | async" dropdown>
+          <a class="dropdown-toggle text-light" dropdownToggle>Welcome {{model.userName}}</a>
+          <div class="dropdown-menu" *dropdownMenu>
+            <a class="dropdown-item">Edit Profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="logOut()">Logout</a>
+          </div>
+        </div>
+        <div *ngIf="(service.currentUser$| async)===null">
+          <form #loginForm="ngForm" class="d-flex " (ngSubmit)="login()" autocomplete="off">
+            <input name="username" [(ngModel)]="model.userName" class="form-control me-2" type="text"
+              placeholder="UserName" aria-label="UserName">
+            <input name="username" [(ngModel)]="model.password" class="form-control me-2" type="password"
+              placeholder="Password" aria-label="Password">
+            <button class="btn btn-outline-success" type="submit">Login</button>
+          </form>
+        </div>
+      </div>
     </div>
-
+  </div>
 </nav>
